@@ -1,77 +1,39 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // 1. Efeito de Sombra na Navbar ao rolar
-  const navbar = document.getElementById("navbar");
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- SELETORES ---
+    const menuBtn = document.querySelector('.menu-mobile'); // O botão hambúrguer
+    const navLinks = document.querySelector('.nav-links');  // O menu lateral branco
+    const closeBtn = document.querySelector('.btn-fechar-menu'); // O botão X
+    const navbar = document.getElementById('navbar'); // A barra de navegação completa
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
-  });
-
-  // 2. Scroll Suave para links internos (caso o CSS scroll-behavior não funcione em algum navegador antigo)
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-
-      const targetId = this.getAttribute("href");
-      const targetElement = document.querySelector(targetId);
-
-      if (targetElement) {
-        window.scrollTo({
-          top: targetElement.offsetTop - 80, // -80px para compensar a altura da navbar fixa
-          behavior: "smooth",
+    // --- 1. ABRIR MENU (Ao clicar no Hambúrguer) ---
+    if (menuBtn) {
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.add('active'); // Adiciona a classe que traz o menu para a tela
         });
-      }
+    }
+
+    // --- 2. FECHAR MENU (Ao clicar no X) ---
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            navLinks.classList.remove('active'); // Remove a classe e esconde o menu
+        });
+    }
+
+    // --- 3. FECHAR MENU (Ao clicar em qualquer Link) ---
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active'); // Fecha o menu automaticamente ao navegar
+        });
     });
-  });
 
-  const menuBtn = document.querySelector(".menu-mobile");
-  const navLinks = document.querySelector(".nav-links");
-
-  if (menuBtn) {
-    menuBtn.addEventListener("click", () => {
-      // Alterna a classe 'active' no menu e no botão
-      navLinks.classList.toggle("active");
-      menuBtn.classList.toggle("active");
+    // --- 4. EFEITO DE SCROLL NA NAVBAR (Sombra ao rolar) ---
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
     });
-  }
 
-  // Fecha o menu automaticamente quando clicar em um link
-  document.querySelectorAll(".nav-links a").forEach((link) => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("active");
-      menuBtn.classList.remove("active");
-    });
-  });
-});
-
-/* --- LÓGICA DO MENU MOBILE --- */
-const menuBtn = document.querySelector(".menu-mobile");
-const navLinks = document.querySelector(".nav-links");
-const closeBtn = document.querySelector(".btn-fechar-menu"); // Seleciona o X
-
-// 1. Abrir o menu pelo Hambúrguer
-if (menuBtn) {
-  menuBtn.addEventListener("click", () => {
-    navLinks.classList.add("active"); // Mostra o menu
-    menuBtn.style.display = "none"; // Esconde o hambúrguer para não sobrepor
-  });
-}
-
-// 2. Fechar o menu pelo botão X
-if (closeBtn) {
-  closeBtn.addEventListener("click", () => {
-    navLinks.classList.remove("active"); // Esconde o menu
-    menuBtn.style.display = "block"; // Traz o hambúrguer de volta
-  });
-}
-
-// 3. Fechar automaticamente ao clicar em um link
-document.querySelectorAll(".nav-links a").forEach((link) => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("active");
-    menuBtn.style.display = "block";
-  });
 });
