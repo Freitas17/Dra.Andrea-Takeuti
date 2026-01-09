@@ -555,3 +555,30 @@ body {
         padding: 0; /* Remove padding extra lateral no mobile */
     }
 }
+
+/* --- BOTÃO FECHAR MENU (X) --- */
+
+/* Esconde o botão no computador */
+.btn-fechar-menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    /* Mostra o botão apenas no celular */
+    .btn-fechar-menu {
+        display: block;
+        position: absolute; /* Permite mover livremente */
+        top: 20px;
+        right: 30px;
+        font-size: 2rem; /* Tamanho grande */
+        color: var(--dourado); /* Cor dourada */
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    /* Efeito de girar ao passar o dedo/mouse */
+    .btn-fechar-menu:hover {
+        transform: rotate(90deg);
+        color: var(--preto-suave);
+    }
+}
