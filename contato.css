@@ -1,0 +1,161 @@
+/* --- contato.css --- */
+
+/* CABEÇALHO INTERNO (Só aparece aqui) */
+.page-header {
+    position: relative;
+    height: 40vh;
+    background-image: url('./img/Clinica.jpg'); /* Verifique se o caminho da imagem está certo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.page-header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.page-header-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #ffffff;
+}
+
+.page-header-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* LAYOUT DA PÁGINA DE CONTATO */
+.contato-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* Coluna da Esquerda (Infos) */
+.contato-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+.icone-dourado {
+    color: #b8860b; /* Usando código direto pois a variável está no outro arquivo (mas funciona se importado junto) */
+    font-size: 1.5rem;
+    margin-top: 5px;
+}
+
+.info-item h4 {
+    color: #2c2c2c;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.link-dourado {
+    color: #b8860b;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.mapa {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Coluna da Direita (Formulário) */
+.contato-form {
+    flex: 1;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    min-width: 300px;
+    border: 1px solid #eee;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c2c2c;
+    font-size: 0.9rem;
+}
+
+.contato-form input,
+.contato-form select,
+.contato-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.contato-form input:focus, 
+.contato-form select:focus, 
+.contato-form textarea:focus {
+    outline: none;
+    border-color: #b8860b;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 15px;
+    background-color: #b8860b;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #966d08;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .contato-wrapper {
+        flex-direction: column;
+    }
+    .contato-form {
+        padding: 20px;
+    }
+    .page-header h2 {
+        font-size: 2rem;
+    }
+}

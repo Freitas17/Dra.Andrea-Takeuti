@@ -1,0 +1,192 @@
+/* --- sobre.css --- */
+
+/* Reutilizando o Header (Para manter consistência) */
+.page-header {
+    position: relative;
+    height: 40vh;
+    background-image: url('./img/Clinica.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.page-header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.page-header-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #ffffff;
+}
+
+.page-header-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* --- LAYOUT BIO (SOBRE) --- */
+.sobre-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 50px;
+}
+
+/* Coluna da Imagem */
+.sobre-img {
+    flex: 1;
+    position: relative; /* Para posicionar a moldura */
+    max-width: 450px;
+}
+
+.sobre-img img {
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    z-index: 2; /* Fica na frente da moldura */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* A moldura dourada decorativa atrás da foto */
+.moldura-dourada {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #b8860b;
+    z-index: 1; /* Fica atrás da foto */
+    border-radius: 5px;
+}
+
+/* Coluna do Texto */
+.sobre-texto {
+    flex: 1;
+}
+
+.titulo-bio {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #2c2c2c;
+    margin-bottom: 5px;
+}
+
+.crm {
+    font-weight: bold;
+    color: #b8860b;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sobre-texto p {
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+/* Lista com Checkmarks */
+.lista-especializacoes {
+    list-style: none;
+    margin: 25px 0;
+}
+
+.lista-especializacoes li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icone-check {
+    color: #b8860b;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+/* --- SEÇÃO PILARES/VALORES --- */
+.valores-bg {
+    background-color: #fcfcfc;
+    border-top: 1px solid #eee;
+}
+
+.titulo-secao {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #2c2c2c;
+}
+
+.valores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.valor-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.valor-card:hover {
+    transform: translateY(-5px);
+    border-bottom: 3px solid #b8860b;
+}
+
+.icone-valor {
+    font-size: 2.5rem;
+    color: #b8860b;
+    margin-bottom: 20px;
+}
+
+.valor-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #2c2c2c;
+}
+
+.valor-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 900px) {
+    .sobre-wrapper {
+        flex-direction: column; /* Texto vai para baixo da imagem no celular */
+        gap: 40px;
+    }
+
+    .sobre-img {
+        max-width: 100%;
+        margin-left: 20px; /* Espaço para a moldura não cortar */
+        margin-top: 20px;
+    }
+    
+    .page-header h2 {
+        font-size: 2rem;
+    }
+}
