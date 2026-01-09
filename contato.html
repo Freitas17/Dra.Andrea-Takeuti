@@ -9,36 +9,23 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:wght@400;600&display=swap"
       rel="stylesheet"
     />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-
-    <link rel="stylesheet" href="contato.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <nav class="navbar" id="navbar">
       <div class="container nav-content">
         <div class="perfil-doutora">
-          <img
-            src="./img/Dra.Andrea.jpg"
-            alt="Foto Dra. Andrea"
-            class="foto-perfil"
-          />
+          <img src="./img/Dra.Andrea.jpg" alt="Foto Dra. Andrea" class="foto-perfil" />
           <h1 class="logo-text">
             Dra. <span class="destaque-dourado">Andrea Takeuti</span>
           </h1>
         </div>
-
         <ul class="nav-links">
-          <li><a href="./index.html">Início</a></li>
-          <li><a href="./sobre.html">Sobre</a></li>
-          <li><a href="./contato.html" class="active">Contato</a></li>
+            <li><a href="index.html">Início</a></li> <li><a href="index.html#sobre">Sobre</a></li>
+            <li><a href="contato.html" class="active">Contato</a></li>
         </ul>
-
         <div class="menu-mobile">
           <div class="bar"></div>
           <div class="bar"></div>
@@ -48,121 +35,51 @@
     </nav>
 
     <header class="page-header">
-      <div class="overlay"></div>
-      <div class="container page-header-content">
-        <h2>Fale Conosco</h2>
-        <p>Estamos prontos para te atender</p>
-      </div>
+        <div class="overlay"></div>
+        <div class="header-content">
+            <h1>Fale Conosco</h1>
+            <p>Estamos prontos para te atender</p>
+        </div>
     </header>
 
-    <section class="section-padrao">
-      <div class="container">
-        <div class="contato-wrapper">
-          <div class="contato-info">
-            <h3
-              style="
-                font-family: 'Playfair Display', serif;
-                margin-bottom: 20px;
-              "
-            >
-              Canais de Atendimento
-            </h3>
+    <section class="section-contato">
+        <div class="container contato-wrapper">
+            
+            <div class="info-box">
+                <h2>Canais de Atendimento</h2>
+                
+                <div class="item-contato">
+                    <h3><i class="fas fa-map-marker-alt"></i> Nossa Clínica</h3>
+                    <p>R. Princesa Isabel de Bragança, 235</p>
+                    <p>Centro, Mogi das Cruzes - SP</p>
+                </div>
 
-            <div class="info-item">
-              <i class="fa-solid fa-location-dot icone-dourado"></i>
-              <div>
-                <h4>Nossa Clínica</h4>
-                <p>
-                  R. Princesa Isabel de Bragança, 235<br />
-                  Centro, Mogi das Cruzes - SP
-                </p>
-              </div>
+                <div class="item-contato">
+                    <h3><i class="fab fa-whatsapp"></i> WhatsApp</h3>
+                    <p>(11) 99394-3410</p>
+                    <a href="#" class="link-dourado">Iniciar conversa</a>
+                </div>
+
+                <div class="item-contato">
+                    <h3><i class="far fa-envelope"></i> E-mail</h3>
+                    <p>contato@draandrea.com.br</p>
+                </div>
             </div>
 
-            <div class="info-item">
-              <i class="fa-brands fa-whatsapp icone-dourado"></i>
-              <div>
-                <h4>WhatsApp</h4>
-                <p>(11) 99394-3410</p>
-                <a href="https://wa.me/5511993943410" class="link-dourado">Iniciar conversa</a>
-              </div>
+            <div class="mapa-box">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.106726284699!2d-46.19168992383848!3d-23.528666360391295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cdd83c6046e8c5%3A0x70c061757833130!2sR.%20Princesa%20Isabel%20de%20Bragan%C3%A7a%2C%20235%20-%20Centro%2C%20Mogi%20das%20Cruzes%20-%20SP%2C%2008710-460!5e0!3m2!1spt-BR!2sbr!4v1704830000000!5m2!1spt-BR!2sbr" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
 
-            <div class="info-item">
-              <i class="fa-regular fa-envelope icone-dourado"></i>
-              <div>
-                <h4>E-mail</h4>
-                <p>contato@draandrea.com.br</p>
-              </div>
-            </div>
-
-            <div class="mapa">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.249840826655!2d-46.19895022467103!3d-23.523514778825863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cdd9fb9af1f067%3A0xa8f7c97ef3fb2ca!2sDra.%20Andrea%20Takeuti%20-%20Est%C3%A9tica%20Avan%C3%A7ada!5e0!3m2!1spt-BR!2sbr!4v1767989085225!5m2!1spt-BR!2sbr"
-                width="600"
-                height="450"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
-
-          <form class="contato-form">
-            <h3
-              style="
-                font-family: 'Playfair Display', serif;
-                margin-bottom: 20px;
-              "
-            >
-              Envie uma Mensagem
-            </h3>
-
-            <div class="form-group">
-              <label for="nome">Nome Completo</label>
-              <input type="text" id="nome" required />
-            </div>
-
-            <div class="form-group">
-              <label for="telefone">Celular</label>
-              <input type="tel" id="telefone" required />
-            </div>
-
-            <div class="form-group">
-              <label for="assunto">Assunto</label>
-              <select id="assunto">
-                <option value="avaliacao">Agendar Avaliação</option>
-                <option value="duvida">Dúvidas sobre Procedimentos</option>
-                <option value="parceria">Parcerias</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="mensagem">Mensagem</label>
-              <textarea id="mensagem" rows="5"></textarea>
-            </div>
-
-            <button type="submit" class="btn-enviar">Enviar Agora</button>
-          </form>
         </div>
-      </div>
     </section>
-
-    <footer class="footer">
-      <div class="container footer-content">
-        <div class="social-links">
-          <a href="https://www.instagram.com/dra.andreatakeutiestetica/"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.facebook.com/p/Andrea-Takeuti-Est%C3%A9tica-Avan%C3%A7ada-61569149243521/"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://wa.me/5511993943410"><i class="fa-brands fa-whatsapp"></i></a>
-        </div>
-        <p class="copyright">
-          &copy; 2026 Dra. Andrea Takeuti. Todos os direitos reservados.
-        </p>
-
-        <p class="dev-credit">Desenvolvido por André de Freitas Ribeiro</p>
-      </div>
-    </footer>
 
     <script src="script.js"></script>
   </body>
