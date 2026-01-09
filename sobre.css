@@ -190,3 +190,24 @@
         font-size: 2rem;
     }
 }
+
+/* ... resto do seu código ... */
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .contato-wrapper {
+        flex-direction: column; /* Isso faz ficar um embaixo do outro */
+    }
+    
+    .info-box, 
+    .mapa-box,
+    .contato-form { /* Se tiver formulário */
+        width: 100%;
+        min-width: 100%;
+        padding: 0;
+    }
+    
+    .page-header {
+        height: 30vh; /* Ajuste a altura do banner no celular */
+    }
+}
